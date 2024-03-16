@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Data Validation Page</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/expenses.css') }}">
+</head>
+
+<body>
+   <section class="validation">
+      {% if success %}
+         <p>Data submitted successfully. No validation errors.</p>
+      {% else %}
+         <p>Some fields require your attention:</p>
+         <ul>
+            {% for field, error in errors.items() %}
+               <li>{{ field }}: {{ error }}</li>
+            {% endfor %}
+         </ul>
+      {% endif %}
+   </section>
+</body>
+</html>

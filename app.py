@@ -53,5 +53,58 @@ def roshambo():
 
     return render_template('roshambo.html', result=result)
 
+@app.route('/technical')
+def technical():
+    return render_template('technical.html')
+
+@app.route('/expenses')
+def expenses():
+    return render_template('expenses.html')
+
+
+@app.route('/validate', methods=['POST'])
+def validate():
+    # Extract form data
+    form_data = {
+        'summary': request.form.get('summary', ''),
+        'accID': request.form.get('accID', ''),
+        'lname': request.form.get('lname', ''),
+        'fname': request.form.get('fname', ''),
+        'init': request.form.get('init', ''),
+        'deptID': request.form.get('deptID', ''),
+        'ssn': request.form.get('ssn', ''),
+        'projID': request.form.get('projID', ''),
+    }
+
+    # Initialize an empty dictionary to keep track of errors
+    errors = {}
+
+    # Check for empty fields and add errors as needed
+    for field, value in form_data.items():
+        if not value:
+            errors[field] = f'{field} is required.'
+
+    # Additional pattern checks
+    if form_data['accID'] and not form_data['accID'].startswith('ACC'):
+        errors['accID'] = 'Account ID must start with ACC and follow the pattern ACCnnnn.'
+    
+    if form_data['deptID'] and not form_data['deptID'].startswith('DEPT'):
+        errors['deptID'] = 'Department ID must start with DEPT and follow the pattern DEPTnnnn.'
+
+    if form_data['ssn'] and not request.form['ssn'].replace('-', '').isdigit():
+        errors['ssn'] = 'Social Security Number must be numeric and follow the pattern nnn-nn-nnnn.'
+
+    if form_data['projID'] and not form_data['projID'].startswith('PROJ-'):
+        errors['projID'] = 'Project ID must start with PROJ- and follow the pattern PROJ-nnnn.'
+
+    # Check if there are any errors
+    if errors:
+        # If there are errors, render the validation template with error messages
+        return render_template('validate.html', errors=errors, form_data=form_data)
+    else:
+        # If there are no errors, process the form data as needed (e.g., save to a database)
+        # Then render the validation template with a success message
+        return render_template('validate.html', success=True)
+
 if __name__ == '__main__':
     app.run(debug=True)
