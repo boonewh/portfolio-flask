@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <img src="{{ url_for('static', filename='images/back42.jpg') }}" alt="hero image">
+                
+    <div class="heroText">
+        <section>
+            <h1 class="heroCenter">Will Boone</h1>
+            <h3 class="heroBottom">Web Developer</h3>
+        </section>
+    </div>
+
+    <div id="about"></div>
+    <h2 class="neon-effect">About</h2>
+    <div class="about-content">
+        <img src="{{ url_for('static', filename='images/Will_Jedi.jpg') }}" alt="Jedi Picture">
+        <div>
+            <p>Hello, I'm Will, in the past I have earned a bachelor's degree with a double major in history and speech communications. Now I am following a dream. I will graduate from Austin Community College in May 2024 with an Associates of Applied Science: Web Programming.</p>
+                
+            <p>I have already earned a certificate in Web Development. My last semester is more about finishing hours and completing the degree.</p>
+
+            <p>I fully anticipate that I will graduate with a 3.9 GPA, but more importantly I will graduate with a passion for making websites. I love the creativity it opens, I love making the back-end components work, and I love seeing a new website come to being from absolutely nothing. And I love coding in Python and the freedom that Flask gives me while also providing the utility!</p>
+            
+            <p>I'm fascinated with the current trajectory of machine learning and the AIs that have been released. I firmly believe they will continue to play a huge role in shaping the world as we move forward. It is a tool that successful people will use, and one we must shape to our needs.</p>
+            
+            <p>My hobbies outside of tech? I love cooking and baking and I'm a gamer at heart, both table-top and video games. I love reading. Issaac Asimov has been my favorite author since high school (though I really, really wish Mr. Martin would finish his series). I also love sci-fi movies. Can you tell from my picture?</p>
+            
+            <p>I appreciate you taking the time to get to know a small bit about me. I look forward to potentially contributing my skills and passion to your team.</p>
+        </div>
+    </div>
+
+    <div id="skills"></div>
+    <h2 class='neon-effect'>Skills</h2>
+    <div>
+        <div class="row">
+            <i class="devicon-html5-plain-wordmark"></i>
+            <i class="devicon-css3-plain-wordmark"></i>
+            <i class="devicon-python-plain-wordmark"></i>
+            <i class="devicon-flask-original-wordmark"></i>
+        </div>
+        <div class="row">
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-github-original-wordmark"></i>
+            <i class="devicon-vscode-plain-wordmark"></i>
+            <i class="devicon-filezilla-plain"></i>
+        </div>
+        <div class="row">
+            <i class="devicon-photoshop-line"></i>
+            <i class="devicon-linux-plain"></i>
+            <i class="devicon-mysql-plain-wordmark"></i>
+            <i class="devicon-wordpress-plain-wordmark"></i>
+        </div>
+        <div class="row">
+            <i class="devicon-java-plain-wordmark"></i>
+            <i class="devicon-jquery-plain-wordmark"></i>
+            <i class="devicon-php-plain"></i>
+            <i class="devicon-codeigniter-plain-wordmark"></i>
+        </div>
+    </div>
+
+    <div id="projects"></div>
+    <h2 class="neon-effect">Projects</h2>
+    <div class="writing2-container">
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/pathsix_games.png') }}" alt="Pathsix Games">
+            <p>A gaming website for my gaming group.</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/css_dallas.png') }}" alt="CSS Dallas Icon">
+            <p>My first commercial project, made for the Center for Social Success in Dallas, Tx.</p>
+        </div>
+
+       <!-- <div class="writing2">
+            <img src="{{ url_for('static', filename='images/blog.jpg') }}" alt="Blog Icon">
+            <p>My blog site. This is a double post, but I feel the blog belongs here.</p>
+        </div>-->
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/lesson_icon.png') }}" alt="Technical Doc Icon">
+            <p>My article on writing high school lesson plans. It is the only one I have set up as a web-based technical doc.</p>
+        </div>
+    
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/expense_report.jpg') }}" alt="Expense Report Icon">
+            <p>A realistic expense report that has one level of information validation.</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/roshambo.jpg') }}" alt="Roshambo Icon">
+            <p>A simple roshambo game that illustrates basic DOM manipulation with Python</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/isaac-asimov.png') }}" alt="Tribute Icon">
+            <a href="https://www.flaticon.com/free-icons/isaac-asimov" title="isaac asimov icons">Isaac asimov icons created by Freepik - Flaticon</a>
+            <p>My Tribute to Isaac Asimov</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/coffeeLogo.png') }}" alt="Coffee Shop Icon">
+            <p>One of my early projects.</p>
+       </div>
+    </div>
+
+    <div id="writing"></div>
+    <h2 class="neon-effect">Writing</h2>
+    <div class="writing2-container">
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/lightning_icon.png') }}" alt="F-150 Article icon">
+            <p>Is Texas Ready for the F-150 Lightning?</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/lesson_icon.png') }}" alt="Lesson Planning icon">
+            <p>Writing High School Lesson Plans</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/separation_icon.png') }}" alt="Seperation of Concerns icon">
+            <p>Separation of Concerns: Why is it Important?</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/validation_icon.png') }}" alt="Validation Icon">
+            <p>Client-Side and Server-Side Validation: You Should Be Using Both</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/mvc_icon.png') }}" alt="MVC Icon">
+            <p>MVC Architecture: What Is It?</p>
+        </div>
+
+        <div class="writing2">
+            <img src="{{ url_for('static', filename='images/ajax_icon.png') }}" alt="Asynchronous JavaScrpt Icon">
+            <p>Asynchronous JavaScrpt and XML: AJAX</p>
+        </div>
+    </div>
+{% endblock %}

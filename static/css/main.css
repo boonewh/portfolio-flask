@@ -1,0 +1,423 @@
+:root {
+  --background: #010103;
+  --accent: #ffee10;
+  --text: white; /*#1CE75C;*/
+  --tertiary: #06d8d8;
+  --quaternary: #fd00f3;
+  --ring: #ff8c00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: 1.2em;
+}
+
+/* HEADER styles */
+/* Navigation Styles */
+
+nav ul {
+  display: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  color: var(--text);
+}
+
+#nav-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#navicon {
+  width: 10%;
+}
+
+#nav-container:hover ul {
+  display: block;
+}
+
+/* Header Plus More Styling */
+
+img {
+  width: 100%;
+  padding-top: -15%;
+}
+
+/* Home.php Styling */
+
+.heroCenter {
+  font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  margin-top: -15%;
+}
+
+h2.neon-effect {
+  display: block;
+  font-family: Neonderthaw, Georgia, "Times New Roman", Times, serif;
+  margin: 50px 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 5em;
+  font-weight: normal;
+  text-align: center;
+  animation: none;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+h2.neon-effect:not(:first-of-type) {
+  margin-top: 150px; /* Adjust this value to your liking */
+}
+
+@keyframes flicker {
+  5%,
+  40%,
+  60%,
+  80% {
+    color: var(--quaternary);
+    text-shadow: 0 0 5px var(--quaternary), 0 0 10px var(--quaternary);
+  }
+  0%,
+  35%,
+  55%,
+  75% {
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 10px white;
+  }
+  100% {
+    color: var(--quaternary);
+    text-shadow: 0 0 30px var(--quaternary);
+  }
+}
+
+.about-content {
+  margin: 15px;
+}
+
+.about-content img {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+  background-color: var(--background);
+}
+
+.row i {
+  font-size: 5em;
+  color: #fff; /* White text color */
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 10px #fff, 0 0 20px #0dff71, 0 0 30px #0dff71;
+  }
+  to {
+    text-shadow: 0 0 2px #fff 0 0 5px #fff, 0 0 10px #0dff71, 0 0 15px #0dff71;
+  }
+}
+
+/* Writing Styles */
+
+.writing2-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.writing2 {
+  flex: 1 0 20%; /* This means the divs will grow and shrink as needed, and they won't be smaller than 20% of the container width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.writing2 img {
+  width: 100%;
+  border-radius: 40px;
+  padding: 20px;
+  max-width: 250px;
+}
+
+.writing2 p {
+  text-align: center;
+  width: 100%;
+  color: var(--text);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Roshambo styles */
+#game {
+  margin-top: 200px;
+  margin-left: 30px;
+}
+
+.writing2 a {
+  font-size: 0.3em;
+}
+
+/* *******************************************
+Tablet and Desktop Styles: 1100px and greater 
+******************************************** */
+
+@media only screen and (min-width: 1000px) {
+  /* HEADER styles */
+  /* Navigation Styles */
+
+  .navFirst {
+    width: 10%;
+  }
+
+  #nav-container:hover ul {
+    display: flex;
+  }
+
+  #navicon {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul {
+    position: absolute;
+    display: flex;
+    margin: 0 5%;
+    padding: 0;
+    top: 5%;
+    left: 1%;
+    width: 80%;
+  }
+
+  ul li {
+    list-style: none;
+    margin: 0 5px;
+    width: 80%;
+  }
+
+  ul li a {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    width: 30%;
+    height: 80%;
+    text-align: center;
+    line-height: 2.5em;
+    text-decoration: none;
+    background: var(--background);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text);
+    transition: 0.5s;
+  }
+
+  ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+  }
+
+  ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent);
+  }
+
+  ul li a:hover {
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent);
+    text-shadow: 0 0 15px var(--accent);
+  }
+
+  a#navicon:hover + ul,
+  nav ul:hover {
+    display: flex;
+  }
+
+  /* Home.php Styling */
+  .heroText {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    background: var(--background);
+    transition: 0.9s;
+    margin: 0 auto;
+    width: 40%;
+    height: 20%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+
+  .heroText::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--ring);
+  }
+
+  .heroText:hover {
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent);
+    text-shadow: 0 0 15px var(--accent);
+    /* Additional hover effects from section */
+  }
+
+  .heroText:hover::before,
+  .heroText:hover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    border-radius: 50%;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+
+  .heroText:hover::after {
+    background: var(--background);
+    animation: 2s counterclockwise infinite;
+    box-shadow: 0 0 15px var(--quaternary);
+  }
+
+  .heroBottom {
+    margin: 0;
+  }
+
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;
+    }
+  }
+
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;
+    }
+  }
+
+  .heroCenter {
+    font-size: 8em;
+    font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  .heroBottom {
+    margin-left: 35px;
+    margin-top: 60px;
+  }
+
+  .about-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-content img {
+    width: 17%;
+    float: left;
+    margin: 5px;
+  }
+
+  .row {
+    margin: 30px 350px;
+  }
+}

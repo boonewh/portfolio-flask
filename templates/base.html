@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--10/21/23-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="portfolio, web dev, full stack, developer">
+        <meta name="Author" content="Will Boone">
+        <title>Will Boone: Web Developer</title>
+        <link rel="icon" href="{{ url_for('static', filename='assets/images/favicon.png') }}" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Neonderthaw&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <title>{% block title %}{% endblock %}</title> <!-- Title Variable -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navFirst">
+                <div id="nav-container">
+                    <img src="{{ url_for('static', filename='images/naviconWhite.jpg') }}" alt="Navigation Icon" id="navicon">
+                    <ul>
+                        <li><a href="/">/HOME</a></li>
+                        <li><a href="#about">/ABOUT</a></li>
+                        <li><a href="#skills">/SKILLS</a></li>
+                        <li><a href="#projects">/PROJECTS</a></li>
+                        <li><a href="#writing">/WRITING</a></li>
+                        <li><a href="/blog">/BLOG</a></li>
+                        <li><a href="/contact">/CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+    </body>
+</html>
+
+{% block scrpts %}{% endblock %}
+
+
+<script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+<script src="{{ url_for('static', filename='js/neonStart.js') }}"></script>
