@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}Will Boone: Web Developer{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block scrpts %}
+    <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/neonStart.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <img src="{{ url_for('static', filename='images/back42.jpg') }}" alt="hero image">
                 
@@ -82,7 +93,7 @@
         </div>
     
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/expense_report.jpg') }}" alt="Expense Report Icon">
+            <a href="/expenses"><img src="{{ url_for('static', filename='images/expense_report.jpg') }}" alt="Expense Report Icon"></a>
             <p>A realistic expense report that has one level of information validation.</p>
         </div>
 

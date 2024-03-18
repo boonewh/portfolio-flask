@@ -2,6 +2,10 @@
 
 {% block title %}Roshambo{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
 {% block content %}
 <section id="game">
     <h1>Rock, Paper, Scissors</h1>
