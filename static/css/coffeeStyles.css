@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* Reset */
+body a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styles */
+
+body {
+  margin: 0px auto;
+  min-width: 320px;
+  padding: 0;
+  background-color: rgb(111, 78, 55);
+  color: white;
+}
+
+header {
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 10px 0 0 400px;
+  text-align: center;
+}
+
+nav {
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 30px;
+  font-size: 1.2em;
+  padding: 0 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a:hover {
+  background-color: grey;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mainWelcome {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  width: 35%;
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 10px;
+  background-color: rgb(111, 78, 55);
+  color: #fff;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+img.logo {
+  width: 50%;
+}
+
+/* Menu Styles */
+#menuWelcome {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  width: 35%;
+}
+
+.secondNav {
+  padding-top: 20px;
+  margin-left: 40px;
+}
+
+.secondNav a {
+  font-size: 1.2em;
+}
+
+.secondHeader {
+  display: flex;
+  text-align: left;
+  line-height: 1.9em;
+  font-size: 1em;
+}
+
+.menuLogo {
+  width: 25%;
+}
+
+table {
+  border: 1px solid white;
+  padding: 5px;
+  margin-top: 40px;
+  background-color: rgb(10, 10, 35);
+  font-family: EraserRegular, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td {
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+section img {
+  width: 100px;
+  height: 90px;
+}
+
+/* Specials Styles */
+
+.specialWelcome {
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  width: 35%;
+}
+
+.specialsLogo {
+  width: 25%;
+  padding-bottom: 15px;
+}
+
+/* Order Styles */
+#order {
+  background-color: white;
+  color: rgb(10, 10, 35);
+}
+
+textarea {
+  width: 30px;
+  height: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.street {
+  font-style: italic;
+}
+
+footer p {
+  margin-left: auto;
+}
+
+/* =============================
+	Mobile Styles: 0 - 1000 pixels
+   =============================
+*/
+@media only screen and (max-width: 1000px) {
+  address,
+  body,
+  div,
+  footer,
+  h1,
+  header,
+  html,
+  img,
+  li,
+  main,
+  ol,
+  p,
+  section,
+  img,
+  nav,
+  .secondNav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+  body {
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: 1.2em;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    vertical-align: baseline;
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  nav a,
+  .secondNav a {
+    display: block;
+    text-align: left;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+
+  header,
+  .secondHeader {
+    padding: 20px 0;
+    margin: 0;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #mainWelcome,
+  #menuWelcome,
+  .specialWelcome {
+    position: static;
+    width: 100%;
+    line-height: 1.5em;
+    font-size: 20px;
+    padding: 0 2px 30px 2px;
+  }
+
+  img.logo {
+    width: 50%;
+    padding: 20px 0 20px 10px;
+  }
+
+  td {
+    padding-right: 5px;
+  }
+
+  footer {
+    background-color: rgb(10, 10, 35);
+  }
+}

@@ -14,6 +14,26 @@ def blog():
 def contact():
     return render_template('contact.html')
 
+@app.route('/coffee')
+def coffee():
+    return render_template('coffee.html')
+
+@app.route('/coffee_menu')
+def coffee_menu():
+    return render_template('coffee_menu.html')
+
+@app.route('/coffee_specials')
+def coffee_specials():
+    return render_template('coffee_specials.html')
+
+@app.route('/coffee_today')
+def coffee_today():
+    return render_template('coffee_today.html')
+
+@app.route('/asimov')
+def asimov():
+    return render_template('asimov.html')
+
 @app.route('/roshambo', methods=['GET', 'POST'])
 def roshambo():
     result = ""

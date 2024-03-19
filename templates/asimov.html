@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta author="Will Boone">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A tribute page to the author Isaac Asimov." />
+        <title>Isaac Asimov Tribute</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/asimov.css') }}">
+    </head>
+
+    <header>
+        <h1 id="title">Isaac Asimov, American Writer</h1>
+        <h2 id="tribute-info">"Writing, to me, is simply thinking through my fingers."</h2>
+    </header>
+
+    <main id="main">
+        <figure id="img-div">
+            <table class="info-table">
+                <tr>
+                  <th>Born:</th>
+                  <td>January 2, 1920<br>Petrovichi, Russian SFSR</td>
+                </tr>
+                <tr>
+                  <th>Died:</th>
+                  <td>April 6, 1992 (aged 72)<br>New York City, U.S.</td>
+                </tr>
+                <tr>
+                  <th>Occupation:</th>
+                  <td>Writer, professor of biochemistry</td>
+                </tr>
+                <tr>
+                  <th>Nationality:</th>
+                  <td>American</td>
+                </tr>
+                <tr>
+                  <th>Education:</th>
+                  <td>Columbia University (BSc, MA, PhD)</td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td></td>
+                </tr>
+            </table>
+
+            <div id="pic1">
+              <img src="{{ url_for('static', filename='images/science-fiction-quarterly.jpg') }}" alt="Pulp Magazine">
+              <figcaption id="img-caption">Pulp Magazine with Asimov Story</figcaption>
+            </div>           
+        </figure>
+        
+        <section>
+            <div id="underBio">
+              <p id="tribute-info">Isaac Asimov was an American writer and professor of biochemistry at Boston University. He was known for his works of science fiction and popular science. Asimov was a prolific writer who wrote or edited more than 500 books and an estimated 90,000 letters and postcards. His books have been published in 9 of the 10 major categories of the Dewey Decimal Classification.</p>
+
+              <p id="tribute-info">Asimov is widely considered a master of hard science fiction and, along with Robert A. Heinlein and Arthur C. Clarke, he was considered one of the "Big Three" science fiction writers during his lifetime. Asimov's most famous work is the "Foundation" series; his other major series are the "Galactic Empire" series and the "Robot" series. The Galactic Empire novels are set in a future universe in which humans have colonized the galaxy. The Robot series is set in a future where robots are common in human society.</p>
+
+              <p id="tribute-info">Asimov also wrote the Lucky Starr series of juvenile science-fiction novels using the pen name Paul French.</p>
+
+              <hr>
+
+              <div class="movies">
+                <h2>Works Translated Into TV and Movies</h2>
+                <ul>
+                  <li>1977: The End of Eternity</li>
+                  <li>1988: Robots</li>
+                  <li>1988: Nightfall</li>
+                  <li>2000: Nightfall</li>
+                  <li>2004: I, Robot</li>
+                  <li>2008: The Bicentennial Man</li>
+                  <li>2021-present: Foundation</li>
+                </div>
+
+                <div id="center">
+                  <img src="{{ url_for('static', filename='images/FoundationVoyage.jpg') }}" alt="Foundation on Apple TV">
+                  <br>
+                  <a href="https://www.goodreads.com/author/show/16667.Isaac_Asimov" id="tribute-link" target="_blank">Asimov's good<b>reads</b> page</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</html>

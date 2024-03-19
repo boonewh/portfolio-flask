@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-    <img src="{{ url_for('static', filename='images/back42.jpg') }}" alt="hero image">
+    <img src="{{ url_for('static', filename='images/portfolio_hero.jpg') }}" alt="hero image">
                 
     <div class="heroText">
         <section>
@@ -103,15 +103,15 @@
         </div>
 
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/isaac-asimov.png') }}" alt="Tribute Icon">
+            <img src="{{ url_for('static', filename='images/coffeeLogo.png') }}" alt="Coffee Shop Icon">
+            <p>This is not a production website, but an early assignment where speicific instructions were given for each page. For example, the Menu page contains a menu that is 100% JavaScript created.</p>
+       </div>
+
+        <div class="writing2">
+            <a  href="/asimov"><img src="{{ url_for('static', filename='images/isaac-asimov.png') }}" alt="Tribute Icon"></a   >
             <a href="https://www.flaticon.com/free-icons/isaac-asimov" title="isaac asimov icons">Isaac asimov icons created by Freepik - Flaticon</a>
             <p>My Tribute to Isaac Asimov</p>
         </div>
-
-        <div class="writing2">
-            <img src="{{ url_for('static', filename='images/coffeeLogo.png') }}" alt="Coffee Shop Icon">
-            <p>One of my early projects.</p>
-       </div>
     </div>
 
     <div id="writing"></div>

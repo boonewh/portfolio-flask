@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee House</title>
+        <link rel="stylesheet" href="../css/coffeeStyles.css">
+        <script src="../js/calculate.js" defer></script>
+    </head>
+
+    <body>
+        <header class="secondHeader">
+            <h1>Coffee House Orders</h1>
+            <nav class="secondNav">
+            <a href="../index.html">Home</a>
+            <a href="../html/menu.html">Menu</a>
+            <a href="../html/todaysSpecials.html">Today's Specials</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="specialWelcome">
+                <img src="../images/coffeeLogo.png" alt="Coffee Shop Logo" class="specialsLogo">
+                <section>
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="../images/blackCoffee.png" alt="Dark Roast">
+                                </td>
+                                <td>Dark Roast</td>
+                                <td>$1</td>
+                                <td>
+                                    <label for="count1">Order<br>Quantity:</label>
+                                    <textarea name="count1" id="count1" cols="1" rows="1">0</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../images/mediumRoast.jpg" alt="Medium Roast">
+                                </td>
+                                <td>Medium Roast</td>
+                                <td>$1.99</td>
+                                <td>
+                                    <label for="count2">Order<br>Quantity:</label>
+                                    <textarea name="count2" id="count2" cols="1" rows="1">0</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../images/lightRoast.jpg" alt="Light Roast">
+                                </td>
+                                <td>Light Roast</td>
+                                <td>$1.49</td>
+                                <td>
+                                    <label for="count3">Order<br>Quantity:</label>
+                                    <textarea name="count3" id="count3" cols="1" rows="1">0</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../images/breakfastBlend.jpg" alt="Breakfast Blend">
+                                </td><td>Breakfast Blend</td>
+                                <td>$1</td>
+                                <td>
+                                    <label for="count4">Order<br>Quantity:</label>
+                                    <textarea name="count4" id="count4" cols="1" rows="1">0</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../images/houseBlend.jpg" alt="House Blend">
+                                </td>
+                                <td>House Blend</td>
+                                <td>$1.99</td>
+                                <td>
+                                    <label for="count5">Order<br>Quantity:</label>
+                                    <textarea name="count5" id="count5" cols="1" rows="1">0</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td><button id="order" onclick = "calculate()">Place Order</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="address">
+              <span class="label">Address:</span>
+              <span class="street">
+                123 Main St. <br>
+                Everywhere, Tx. 78945
+              </span>
+              <p>All Rights Reserved</p>
+            </div>
+          </footer>
+
+    </body>
+</html>
+

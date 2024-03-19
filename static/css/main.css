@@ -146,7 +146,7 @@ h2.neon-effect:not(:first-of-type) {
 }
 
 .writing2 {
-  flex: 1 0 20%; /* This means the divs will grow and shrink as needed, and they won't be smaller than 20% of the container width */
+  flex: 1 0 30%; /* This means the divs will grow and shrink as needed, and they won't be smaller than 20% of the container width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +161,7 @@ h2.neon-effect:not(:first-of-type) {
 
 .writing2 p {
   text-align: center;
-  width: 100%;
+  width: 90%;
   color: var(--text);
   margin-left: auto;
   margin-right: auto;

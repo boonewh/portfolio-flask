@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Will Boone">
+    <meta description="A mock-up of a coffee house website, demonstrating various JavaScript techniques.">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coffeeStyles.css') }}">
+    <script src="{{ url_for('static', filename='js/coffee_specials.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/coffee_banner.js') }}" defer></script>
+  </head>
+  
+  <body>
+    <header>
+      <div class="banner">
+        <img id="bannerImages" src="" alt="Banner">
+      </div>
+      <nav>
+        <a href="/">Back to Portfolio</a>
+        <a href="/coffee">Coffee Home</a>
+        <a href="/coffee_menu">Menu</a>
+        <a href="/coffee_today">Order Online</a>
+      </nav>
+      <h1>Welcome to the Coffee House!</h1>
+    </header>
+
+    <main id="mainWelcome">
+      <img src="{{ url_for('static', filename='images/coffeeLogo.png') }}" alt="Coffee Shop Logo" class="logo">
+      <p>Down Home Coffee House, where we take it easy and make sure you find 
+        the coffee you're looking for.</p>
+      <p>
+        Come in, put your boots up, and join us for a cup.
+      </p>
+      <br>
+        <button id="specialsButton"><h2>Check Out Our Specials</h2></button>
+    </main>
+
+    <footer>
+      <div class="address">
+        <span class="label">Address:</span>
+        <span class="street">
+          123 Main St. <br>
+          Everywhere, Tx. 78945
+        </span>
+        <p>All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
