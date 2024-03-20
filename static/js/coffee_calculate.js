@@ -1,4 +1,4 @@
-var calcPrices = [1.00, 1.99, 1.49, 1.00, 1.99];
+var calcPrices = [0.99, 1.99, 1.49, 0.99, 1.99];
 var calcTotal = 0;
 const tax = 0.0825;
 

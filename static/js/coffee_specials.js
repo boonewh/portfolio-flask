@@ -1,5 +1,5 @@
 // Arrays with the prices, names and images 
-var menuPrices = [1.99, 1.99, 2.49, 1.00, 1.00];
+var menuPrices = [1.99, 1.99, 2.49, .99, .99];
 var menuNames = [
   "Banana Muffin", 
   "Chocolate Muffin", 

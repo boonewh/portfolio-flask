@@ -21,7 +21,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  padding: 10px 0 0 400px;
+  padding: 10px 0 0 500px;
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ h1 {
   position: absolute;
   top: 50px;
   left: 150px;
-  width: 35%;
+  width: 33%;
   line-height: 1.5em;
   font-size: 20px;
 }
@@ -122,6 +122,10 @@ section img {
   top: 10px;
   left: 150px;
   width: 35%;
+}
+
+.specialWelcome button {
+  padding: 20px;
 }
 
 .specialsLogo {

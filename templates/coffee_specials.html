@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Will Boone">
+    <meta description="A mock-up of a coffee house website, demonstrating various JavaScript techniques.">
     <title>Coffee House</title>
-    <link rel="stylesheet" href="../css/coffeeStyles.css">
-    <script src="../js/specials.js" async></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coffeeStyles.css') }}">
+    <script src="{{ url_for('static',filename='js/coffee_specials.js')}}" async></script>
   </head>
 
   <body>
@@ -14,8 +16,8 @@
     </header>
 
     <main class="specialWelcome">
-      <img src="../images/coffeeLogo.png" alt="Coffee Shop Logo" class="specialsLogo">
-      <button type="button" id="closeButton" onclick="window.open('', '_self', ''); window.close();">Close Specials Page</button>
+      <img src="{{ url_for('static', filename='images/coffeeLogo.png') }}" alt="Coffee Shop Logo" class="specialsLogo">
+      <button type="button" id="closeButton" onclick="window.open('', '_self', ''); window.close();">Close Bakery Page</button>
       <section>
           <p id="specialsTable">
 
