@@ -59,7 +59,7 @@ img {
   padding-top: -15%;
 }
 
-/* Home.php Styling */
+/* Home Styling */
 
 .heroCenter {
   font-family: "Kaushan Script", Arial, Helvetica, sans-serif;
@@ -178,6 +178,29 @@ h2.neon-effect:not(:first-of-type) {
   font-size: 0.3em;
 }
 
+/* Blog Styles */
+
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 150px auto 0;
+  width: 70%;
+}
+
+.blog-content h2 {
+  padding: 0;
+  height: 50px;
+  font-size: 1.2em;
+  font-weight: normal;
+  animation: flicker 1.5s;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
 /* *******************************************
 Tablet and Desktop Styles: 1100px and greater 
 ******************************************** */
@@ -265,7 +288,7 @@ Tablet and Desktop Styles: 1100px and greater
     display: flex;
   }
 
-  /* Home.php Styling */
+  /* Home Styling */
   .heroText {
     position: absolute;
     top: 35%;

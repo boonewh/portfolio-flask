@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Dev Blog{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="blog-content">
+        <h1>Blog</h1>
+        <div class="blog-post">
+            <h2>First Post! March 20, 2024</h2>
+            <p>The first post for this blog, I want to set some expectattions. First of all, if you are here in the early stages, thank you for reading! Second, I would like to acknowledge that you are seeing plain, open text at the top of an empty page. Pretty boring right now, right? Worry not, I have plans for this page. When I'm finished with it, I plan on making it worthy of being on my projects page. Stay tuned for more!</p>
+            <p>Another point I would like to make is that these words are all my own. I will not use AI to produce a blog entry. Let's extend that and say that none of the writing in my portfolio will be produced by AI. I will say that in my more formal writing, I will run it through AI to check for spelling and grammar errors, but it is not going to be produced by anything except my brain. A little sad that I have to address this point, but it's the world we live in, isn't it?</p> 
+            <p>My formal writing up to this point has been for school, BUT, I have found that I learn more about theory from researching and writing a tech subject than I do from any other method. So letting AI spit out that content from me would be pointless. This blog will personal reflections on my journey, so why would I assign that to a lifeless AI? Again, that would be pointless.</p>
+            <p>The content of this blog will be mostly informal, sometimes downright casual. And yes, there will probably be some typos that I don't catch. Welcome to the journey!</p>
+        </div>
+    </div>
+{% endblock %}

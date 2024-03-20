@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock %}
 
-{% block scrpts %}
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
     <script src="{{ url_for('static', filename='js/neonStart.js') }}"></script>
 {% endblock %}
@@ -128,22 +128,22 @@
         </div>
 
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/separation_icon.png') }}" alt="Seperation of Concerns icon">
+            <a href="{{ url_for('static', filename='images/seperation_of_concerns.pdf') }}"><img src="{{ url_for('static', filename='images/separation_icon.png') }}" alt="Seperation of Concerns icon"></a>
             <p>Separation of Concerns: Why is it Important?</p>
         </div>
 
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/validation_icon.png') }}" alt="Validation Icon">
+            <a href="{{ url_for('static', filename='images/Validation.pdf') }}"><img src="{{ url_for('static', filename='images/validation_icon.png') }}" alt="Validation Icon"></a>
             <p>Client-Side and Server-Side Validation: You Should Be Using Both</p>
         </div>
 
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/mvc_icon.png') }}" alt="MVC Icon">
+            <a href="{{ url_for('static', filename='images/mvc.pdf') }}"><img src="{{ url_for('static', filename='images/mvc_icon.png') }}" alt="MVC Icon"></a>
             <p>MVC Through Back-End Frameworks</p>
         </div>
 
         <div class="writing2">
-            <img src="{{ url_for('static', filename='images/ajax_icon.png') }}" alt="Asynchronous JavaScrpt Icon">
+            <a href="{{ url_for('static', filename='images/AJAX.pdf') }}"><img src="{{ url_for('static', filename='images/ajax_icon.png') }}" alt="Asynchronous JavaScrpt Icon"></a>
             <p>Asynchronous JavaScrpt and XML: AJAX</p>
         </div>
     </div>
