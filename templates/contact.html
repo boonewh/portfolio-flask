@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Page{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/neonStart.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="contact">
+      <h2 class="neon-effect">Email Contact</h2>
+      <p> for William Boone, Pathsix Web Design</p>
+      <p>Email me with questions or if you want to hire me.</p>
+      <p>I look forward to hearing from you!</p>
+  </div>
+  {% if success %}
+    <p>Thank you for your message. We'll get back to you shortly.</p>
+  {% else %}
+    {% for message in form.name.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% for message in form.email.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% for message in form.subject.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% for message in form.message.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    <div class="form-container">
+        <form action="{{ url_for('contact') }}" method=post>
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        {{ form.name }}
+        {{ form.email.label }}
+        {{ form.email }}
+        {{ form.subject.label }}
+        {{ form.subject }}
+        {{ form.message.label }}
+        {{ form.message }}
+        {{ form.submit }}
+        </form>
+    </div>
+  {% endif %}
+{% endblock %}

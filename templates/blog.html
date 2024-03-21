@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock %}
 
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/neonStart.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <div class="blog-content">
-        <h1>Blog</h1>
+        <h2 class="neon-effect">Blog</h2>
         <div class="blog-post">
             <h2>First Post! March 20, 2024</h2>
             <p>The first post for this blog, I want to set some expectattions. First of all, if you are here in the early stages, thank you for reading! Second, I would like to acknowledge that you are seeing plain, open text at the top of an empty page. Pretty boring right now, right? Worry not, I have plans for this page. When I'm finished with it, I plan on making it worthy of being on my projects page. Stay tuned for more!</p>
