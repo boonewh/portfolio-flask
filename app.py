@@ -153,6 +153,3 @@ def validate():
         # If there are no errors, process the form data as needed (e.g., save to a database)
         # Then render the validation template with a success message
         return render_template('validate.html', success=True)
-
-if __name__ == '__main__':
-    app.run(debug=True)
