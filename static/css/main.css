@@ -160,8 +160,7 @@ h2.neon-effect:not(:first-of-type) {
 }
 
 .writing2 p {
-  text-align: center;
-  width: 90%;
+  width: 80%;
   color: var(--text);
   margin-left: auto;
   margin-right: auto;
