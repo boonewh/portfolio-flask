@@ -74,7 +74,7 @@ h2.neon-effect {
   padding: 0;
   width: 100%;
   height: 50px;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: normal;
   text-align: center;
   animation: none;
@@ -145,14 +145,16 @@ h2.neon-effect:not(:first-of-type) {
   justify-content: space-around;
 }
 
-.writing2 {
+.writing2,
+.writing {
   flex: 1 0 30%; /* This means the divs will grow and shrink as needed, and they won't be smaller than 20% of the container width */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.writing2 img {
+.writing2 img,
+.writing img {
   width: 100%;
   border-radius: 40px;
   padding: 20px;
@@ -167,13 +169,23 @@ h2.neon-effect:not(:first-of-type) {
   padding: 0 20px;
 }
 
+.writing p {
+  text-align: center;
+  width: 80%;
+  color: var(--text);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
 /* Roshambo styles */
 #game {
   margin-top: 200px;
   margin-left: 30px;
 }
 
-.writing2 a {
+.writing2 a,
+.writing a {
   font-size: 0.3em;
 }
 
@@ -192,97 +204,63 @@ header {
   margin: 20px 0;
 }
 
-/* Contact form */
+/* Base styles for form elements, optimized for mobile */
 form label {
   font-size: 1.2em;
   font-weight: bold;
   display: block;
   padding: 10px 0;
 }
-form input#name,
-form input#email,
-form input#subject {
-  width: 400px;
+
+/* Inputs and Textarea - full width on mobile */
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form input[type="submit"] {
+  width: 100%;
   background-color: #fafafa;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #cccccc;
-  padding: 5px;
+  padding: 10px;
   font-size: 1.1em;
+  box-sizing: border-box; /* Ensure padding does not add to the width */
 }
-form textarea#message {
-  width: 500px;
-  height: 100px;
-  background-color: #fafafa;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 1.1em;
+
+/* Adjust the height for textarea specifically */
+form textarea {
+  height: 150px; /* Larger height for mobile for easier typing */
 }
+
+/* Style for the submit button */
 form input#submit {
   display: block;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #d8d8d8;
-  padding: 10px;
+  margin-top: 10px; /* Add some space above the submit button */
   font-weight: bold;
-  text-align: center;
-  color: #000000;
+  color: #000;
   background-color: #f4f4f4;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #f4f4f4),
-    color-stop(100%, #e5e5e5)
-  );
-  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
-  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
-  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
-  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
-  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
+  background-image: linear-gradient(to bottom, #f4f4f4, #e5e5e5);
+  transition: all 0.3s ease-in-out;
 }
+
+/* Hover effect for submit button */
 form input#submit:hover {
   cursor: pointer;
-  border: 1px solid #c1c1c1;
+  border-color: #c1c1c1;
   background-color: #dbdbdb;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #dbdbdb),
-    color-stop(100%, #cccccc)
-  );
-  background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
-  background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
-  background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
-  background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
-  background-image: linear-gradient(top, #dbdbdb, #cccccc);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+  background-image: linear-gradient(to bottom, #dbdbdb, #cccccc);
 }
 
-/* Contact Page */
-/* Flash messages for validation */
-.flash {
-  background-color: #fbb0b0;
-  padding: 10px;
-  width: 400px;
-}
-
-.contact {
-  margin-top: 150px;
-  text-align: center;
-}
-
+/* Flash message and form container - full width */
+.flash,
 .form-container {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+}
+
+/* Ensure inputs and textarea fill their containers */
+input[type="text"],
+input[type="email"],
+textarea {
+  box-sizing: border-box;
 }
 
 /* *******************************************
@@ -424,6 +402,10 @@ Tablet and Desktop Styles: 1100px and greater
     margin: 0;
   }
 
+  h2.neon-effect {
+    font-size: 5em;
+  }
+
   @keyframes clockwise {
     0% {
       top: -5px;
@@ -526,5 +508,41 @@ Tablet and Desktop Styles: 1100px and greater
 
   .row {
     margin: 30px 350px;
+  }
+
+  /* Contact Page */
+
+  .contact {
+    margin-top: 150px;
+  }
+
+  .contact p {
+    text-align: center;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 400px; /* Fixed width for larger screens */
+  }
+
+  form textarea {
+    width: 500px; /* Larger fixed width for textarea */
+  }
+
+  /* Flash message styling for better visibility on larger screens */
+  .flash {
+    background-color: #fbb0b0;
+    padding: 10px;
+    max-width: 60%;
+    margin: 0 auto; /* Center the flash message */
+  }
+
+  /* Adjust form container for larger screens */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
 }
