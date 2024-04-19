@@ -143,6 +143,11 @@ div.writing2 a.github-link {
 
 /* Writing Styles */
 
+div.squash {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .writing2-container {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +205,7 @@ div.writing2 a.github-link {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 150px auto 0;
-  width: 70%;
+  width: 60%;
 }
 
 header {

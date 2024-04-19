@@ -70,11 +70,13 @@
 
     <div id="projects"></div>
     <h2 class="neon-effect">Projects</h2>
-    <h3>This portfolio:</h3>
-    <p>Languages: HTML, CSS, JavaScript, Python</p>
-    <p>Framework: Flask</p>
-    <a href="https://github.com/boonewh/portfolio-flask.git" class="github-link"><i class="devicon-github-original-wordmark"></i></a>
-    <p>This site is a work in progress. It is self hosted on a Kamatera VPS. The stack is Unbuntu, Caddy, SQLite and Python. SQLite features are not completed, so you will not see them yet. My plans for the blog will be the first implementation.</p>
+    <div class="squash">
+        <h3>This portfolio:</h3>
+        <p>Languages: HTML, CSS, JavaScript, Python</p>
+        <p>Framework: Flask</p>
+        <a href="https://github.com/boonewh/portfolio-flask.git" class="github-link"><i class="devicon-github-original-wordmark"></i></a>
+        <p>This site is a work in progress. It is self hosted on a Kamatera VPS. The stack is Unbuntu, Caddy, SQLite and Python. SQLite features are not completed, so you will not see them yet. My plans for the blog will be the first implementation.</p>
+    </div>
     <br>
     <div class="writing2-container">
         <div class="writing2">
@@ -135,7 +137,7 @@
         </div>
 
         <div class="writing2">
-            <a  href="https://pathsix.games/JadeRegent/dice"><img src="{{ url_for('static', filename='images/dice_icon.jpg') }}" alt="Dice Roller icon"></a>
+            <a  href="https://pathsix.games/dice"><img src="{{ url_for('static', filename='images/dice_icon.jpg') }}" alt="Dice Roller icon"></a>
             <a href="https://github.com/boonewh/PathSixGames/blob/main/resources/diceRoller.js" class="github-link"><i class="devicon-github-original-wordmark github-link"></i></a>
             <p>Language: JavaScript</p>
             <p>Highlighting the dice app in the Pathsix Games website.</p>
