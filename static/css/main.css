@@ -216,9 +216,35 @@ div.squash {
 .blog-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 150px auto 0;
-  width: 60%;
+  width: 70%;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  width: 100%;
+}
+
+.blog ul {
+  margin-left: 5%;
+  margin-bottom: 50px;
+}
+
+.blog ul li {
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  font-size: 1.5em;
+  width: 50%;
+}
+
+.blog-add {
+  margin: 150px auto 0;
 }
 
 header {
@@ -316,7 +342,7 @@ Tablet and Desktop Styles: 1100px and greater
     list-style: none;
   }
 
-  ul {
+  .navFirst ul {
     position: absolute;
     display: flex;
     margin: 0 5%;
@@ -326,13 +352,13 @@ Tablet and Desktop Styles: 1100px and greater
     width: 80%;
   }
 
-  ul li {
+  .navFirst ul li {
     list-style: none;
     margin: 0 5px;
     width: 80%;
   }
 
-  ul li a,
+  .navFirst ul li a,
   footer a {
     position: relative;
     display: block;
@@ -349,7 +375,7 @@ Tablet and Desktop Styles: 1100px and greater
     transition: 0.5s;
   }
 
-  ul li a::before,
+  .navFirst ul li a::before,
   footer a::before {
     content: "";
     position: absolute;
@@ -364,13 +390,13 @@ Tablet and Desktop Styles: 1100px and greater
     z-index: -1;
   }
 
-  ul li a:hover::before,
+  .navFirst ul li a:hover::before,
   footer a:hover::before {
     transform: scale(1.1);
     box-shadow: 0 0 15px var(--accent);
   }
 
-  ul li a:hover,
+  .navFirst ul li a:hover,
   footer a:hover {
     color: var(--accent);
     box-shadow: 0 0 15px var(--accent);

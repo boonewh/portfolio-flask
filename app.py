@@ -1,10 +1,15 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 from forms import ContactForm
 from flask_mail import Mail, Message
 from config import EMAIL_PASSWORD, EMAIL_ADDRESS
+import os
 
 app = Flask(__name__)
-app.secret_key = 'pathsix033170'
+app.config.from_object('config.Config')
+
+db = SQLAlchemy(app)
 
 mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
@@ -17,10 +22,6 @@ mail.init_app(app)
 @app.route('/')
 def index():
     return render_template('index.html')
-
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -153,3 +154,47 @@ def validate():
         # If there are no errors, process the form data as needed (e.g., save to a database)
         # Then render the validation template with a success message
         return render_template('validate.html', success=True)
+
+class BlogPost(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(140), unique=True, nullable=False)
+    slug = db.Column(db.String(140), unique=True, nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f'<BlogPost {self.title}>'
+
+# Create the database tables if they don't exist
+with app.app_context():
+    db.create_all()
+
+# Define routes
+@app.route('/blog')
+def blog():
+    posts = BlogPost.query.order_by(BlogPost.timestamp.desc()).all()
+    return render_template('blog.html', posts=posts)
+
+@app.route('/post/<slug>')
+def post(slug):
+    post = BlogPost.query.filter_by(slug=slug).first_or_404()
+    return render_template('post.html', post=post)
+
+@app.route('/add', methods=['GET', 'POST'])
+def add_post():
+    if request.method == 'POST':
+        password = request.form['password']
+        if password == app.config['ADMIN_PASSWORD']:
+            title = request.form['title']
+            content = request.form['content']
+            slug = title.lower().replace(' ', '-')
+            new_post = BlogPost(title=title, content=content, slug=slug)
+            db.session.add(new_post)
+            db.session.commit()
+            return redirect(url_for('blog'))
+        else:
+            flash('Invalid password')
+    return render_template('add_post.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
