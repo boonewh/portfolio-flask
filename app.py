@@ -3,16 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from forms import ContactForm
 from flask_mail import Mail, Message
+from config import EMAIL_PASSWORD, EMAIL_ADDRESS
 import os
 
 app = Flask(__name__)
-
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI', 'sqlite:///app.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS', 'False').lower() in ('true', '1', 't')
-app.config['EMAIL_ADDRESS'] = os.getenv('EMAIL_ADDRESS')
-app.config['EMAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
-app.config['ADMIN_PASSWORD'] = os.getenv('ADMIN_PASSWORD')
+app.config.from_object('config.Config')
 
 db = SQLAlchemy(app)
 
@@ -20,8 +15,8 @@ mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = app.config['EMAIL_ADDRESS']
-app.config["MAIL_PASSWORD"] = app.config['EMAIL_PASSWORD']
+app.config["MAIL_USERNAME"] = EMAIL_ADDRESS
+app.config["MAIL_PASSWORD"] = EMAIL_PASSWORD
 mail.init_app(app)
 
 @app.route('/')
