@@ -136,6 +136,14 @@ h3 {
   background-color: var(--background);
 }
 
+.row2 a {
+  font-size: 1.5em;
+}
+
+.row2 a:hover {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
 .row i,
 .row2 i {
   font-size: 5em;
