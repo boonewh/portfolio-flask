@@ -3,9 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from forms import ContactForm
 from flask_mail import Mail, Message
-from config import EMAIL_PASSWORD, EMAIL_ADDRESS
 import os
-from flask import Flask
 
 app = Flask(__name__)
 
@@ -22,8 +20,8 @@ mail = Mail()
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = EMAIL_ADDRESS
-app.config["MAIL_PASSWORD"] = EMAIL_PASSWORD
+app.config["MAIL_USERNAME"] = app.config['EMAIL_ADDRESS']
+app.config["MAIL_PASSWORD"] = app.config['EMAIL_PASSWORD']
 mail.init_app(app)
 
 @app.route('/')
