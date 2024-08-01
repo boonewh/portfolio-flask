@@ -5,9 +5,16 @@ from forms import ContactForm
 from flask_mail import Mail, Message
 from config import EMAIL_PASSWORD, EMAIL_ADDRESS
 import os
+from flask import Flask
 
 app = Flask(__name__)
-app.config.from_object('config.Config')
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS', 'False').lower() in ('true', '1', 't')
+app.config['EMAIL_ADDRESS'] = os.getenv('EMAIL_ADDRESS')
+app.config['EMAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
+app.config['ADMIN_PASSWORD'] = os.getenv('ADMIN_PASSWORD')
 
 db = SQLAlchemy(app)
 
