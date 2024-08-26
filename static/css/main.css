@@ -205,7 +205,15 @@ div.squash {
   color: var(--text);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
   padding: 0 20px;
+}
+
+.slug-link {
+  font-size: 1em !important;
+  text-decoration: underline;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Roshambo styles */

@@ -25,6 +25,8 @@
     <div class="about-content">
         <img src="{{ url_for('static', filename='images/Will_Jedi.jpg') }}" alt="Jedi Picture">
         <div>
+            <a href="{{ url_for('static', filename='images/my_professional_roadmap.pdf') }}" target="_blank"><u>"My Professional Roadmap" Document</u></a>
+
             <p>Hello, I'm Will, in the past I have earned a bachelor's degree with a double major in history and speech communications. Now I am following a dream. I graduated from Austin Community College in May 2024 with an Associates of Applied Science: Web Programming.</p>
                 
             <p>I have also earned a certificate in Web Development in December of 2023. My last semester was more about finishing hours and completing the degree.</p>
@@ -200,7 +202,7 @@
         <div class="writing">
             <a href="{{ url_for('static', filename='images/seperation_of_concerns.pdf') }}"><img src="{{ url_for('static', filename='images/separation_icon.png') }}" alt="Seperation of Concerns icon"></a>
             <p>An Early Take On Separation of Concerns</p>
-            <!--<p>Read my own rebuttal in my <a href="{{url_for('blog')}}">blog</a></p>-->
+            <p>Read my own rebuttal to this article in my <a href="{{ url_for('post', slug='separation-of-concerns-rebuttal') }}" class="slug-link">blog</a></p>
         </div>
 
         <div class="writing">
